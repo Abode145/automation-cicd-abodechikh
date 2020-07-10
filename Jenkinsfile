@@ -14,7 +14,7 @@ pipeline {
                     cd frontend-test/
                     npm install && npm run cypress:run
                 ''' 
-            /*    archiveArtifacts allowEmptyArchive: true, artifacts: 'frontend-test/cypress/videos/**'
+                archiveArtifacts allowEmptyArchive: true, artifacts: 'frontend-test/cypress/videos/**'
                 publishHTML([
                     allowMissing: false, 
                     alwaysLinkToLastBuild: false, 
@@ -24,13 +24,26 @@ pipeline {
                     reportName: 'Frontend report', 
                     reportTitles: ''
                 ])
-                */
+                
             }
-        }/*
+        }
          stage('Backend tests') {
             steps {
-                sh 'pwd'
-                sh 'ls -lart'
+                sh '''
+                    cd backend/
+                    npm install && npm run test:report
+                ''' 
+                archiveArtifacts allowEmptyArchive: true, artifacts: 'backend/cypress/videos/**'
+                publishHTML([
+                    allowMissing: false, 
+                    alwaysLinkToLastBuild: false, 
+                    keepAll: false, 
+                    reportDir: 'backend/mochawesome-report', 
+                    reportFiles: 'mochawesome.html', 
+                    reportName: 'backend report', 
+                    reportTitles: ''
+                ])
+
             }
         }
          stage('Performance tests') {
@@ -50,7 +63,7 @@ pipeline {
                     reportTitles: ''
                 ])
             }
-        }*/
+        }
     }
 
 }
