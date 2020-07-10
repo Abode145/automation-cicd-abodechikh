@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cypressopen": "cypress open",
+    "test:report": "cypress run --reporter mochawesome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0"
+  },
+  "devDependencies": {
+    "cypress": "^4.8.0"
+  },
+  "description": ""
+}

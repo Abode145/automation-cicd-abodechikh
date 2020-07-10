@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-23T18:31:49.782Z",
+    "end": "2020-05-23T18:31:56.184Z",
+    "duration": 6402,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eb584617-2865-4ce1-ac43-732249cfc3b3",
+      "title": "",
+      "fullFile": "cypress/integration/visual-regresion.spec.js",
+      "file": "cypress/integration/visual-regresion.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7924b511-484b-43fb-9262-f64cca955340",
+          "title": "Visual-regression test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "percy - Room Navigation",
+              "fullTitle": "Visual-regression test suite percy - Room Navigation",
+              "timedOut": null,
+              "duration": 5560,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.percySnapshot('Login-page');\nloginPage.performLogin(cy);\nmainPage.CheckMainPage(cy);\ncy.percySnapshot('Main-page');\nmainPage.gotoRoomsPage(cy); //Assertions sker innuti funktionen\ncy.percySnapshot('Rooms-page');\nroomsPage.gotoMainPage(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoClientsPage(cy); //assertions sker innuti funktionen\ncy.percySnapshot('Clients-page');\nclientsPage.gotoMainPage(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoBillsPage(cy); //assertions sker innuti funktionen\ncy.percySnapshot('Bills-page');\nbillsPage.gotoMainPage(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoReservationsPage(cy); //assertions sker innuti funktionen\ncy.percySnapshot('Reservations-page');\nreservationsPage.gotoMainPage(cy);\nmainPage.CheckMainPage(cy);\nmainPage.performLogout(cy);\nloginPage.checkLoginPage(cy);",
+              "err": {},
+              "uuid": "33a35331-a449-4d97-87d1-1c911fb6d046",
+              "parentUUID": "7924b511-484b-43fb-9262-f64cca955340",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "33a35331-a449-4d97-87d1-1c911fb6d046"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5560,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {},
+      "version": "5.1.0"
+    }
+  }
+}
